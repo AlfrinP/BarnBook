@@ -1,19 +1,23 @@
 package com.example.barnbook.ui.components
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.barnbook.R
 
 data class NavItems(
     val label: String,
@@ -25,11 +29,11 @@ data class NavItems(
 @Composable
 fun BottomNavBar() {
     val navItems = listOf(
-        NavItems("Home"),
-        NavItems("Activity"),
-        NavItems("Add"),
-        NavItems("Items"),
-        NavItems("Profile")
+        NavItems("Home", R.drawable.home),
+        NavItems("Activity", R.drawable.activity),
+        NavItems("Add", R.drawable.plus),
+        NavItems("Items", R.drawable.items),
+        NavItems("Profile", R.drawable.profile)
     )
     NavigationBar(
         modifier = Modifier
@@ -38,23 +42,22 @@ fun BottomNavBar() {
             .fillMaxWidth()
     ) {
         navItems.forEach { navItem ->
-            Box(
-                modifier = Modifier.weight(1f),
-                contentAlignment = Alignment.Center
-            ) {
-                if (navItem.label != "Add") {
-                    Text(text = navItem.label)
-                } else {
-                    Button(
-                        onClick = navItem.onClick,
-                        modifier = Modifier
-                            .size(80.dp)
-                            .padding(10.dp),
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .background(
+                        color = if (navItem.label == "Add") Color.LightGray else Color.Transparent,
                         shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Text(text = navItem.label)
-                    }
-                }
+                    )
+                    .padding(10.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(5.dp, Alignment.CenterVertically)
+            ) {
+                Icon(
+                    painter = painterResource(navItem.icon),
+                    contentDescription = navItem.label
+                )
+                Text(text = navItem.label)
             }
         }
     }
