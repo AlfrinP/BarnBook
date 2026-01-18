@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.barnbook.R
 
 data class NavItems(
@@ -57,7 +58,7 @@ fun BottomNavBar() {
                     painter = painterResource(navItem.icon),
                     contentDescription = navItem.label
                 )
-                Text(text = navItem.label)
+                Text(text = navItem.label, fontSize = 12.sp)
             }
         }
     }
