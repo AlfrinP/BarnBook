@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush.Companion.verticalGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -81,7 +82,7 @@ fun BottomNavBar(
                             .offset(y = (-8).dp)
                             .clip(CircleShape)
                             .background(
-                                brush = androidx.compose.ui.graphics.Brush.verticalGradient(
+                                brush = verticalGradient(
                                     colors = listOf(
                                         FreshGreen,
                                         FreshGreen.copy(alpha = 0.9f)
@@ -171,15 +172,5 @@ fun NavBarItem(
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
             color = textColor
         )
-
-        // Selection indicator
-        if (isSelected) {
-            Box(
-                modifier = Modifier
-                    .size(4.dp)
-                    .clip(CircleShape)
-                    .background(FreshGreen)
-            )
-        }
     }
 }
