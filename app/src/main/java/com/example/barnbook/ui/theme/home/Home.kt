@@ -1,4 +1,4 @@
-package com.example.barnbook.home
+package com.example.barnbook.ui.theme.home
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween

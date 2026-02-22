@@ -14,10 +14,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.barnbook.activity.ActivityScreen
-import com.example.barnbook.home.Home
-import com.example.barnbook.items.ItemsScreen
-import com.example.barnbook.profile.ProfileScreen
+import com.example.barnbook.ui.theme.activity.ActivityScreen
+import com.example.barnbook.ui.theme.home.Home
+import com.example.barnbook.ui.theme.items.ItemsScreen
+import com.example.barnbook.ui.theme.profile.ProfileScreen
 import com.example.barnbook.ui.components.BottomNavBar
 import com.example.barnbook.ui.theme.BarnBookTheme
 import kotlinx.serialization.Serializable

@@ -1,4 +1,4 @@
-package com.example.barnbook.add
+package com.example.barnbook.ui.theme.add
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -44,10 +44,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.barnbook.R
-import com.example.barnbook.items.ItemCategory
+import com.example.barnbook.ui.theme.items.ItemCategory
 import com.example.barnbook.ui.components.CategoryButton
 import com.example.barnbook.ui.theme.AnimalBrown
 import com.example.barnbook.ui.theme.FreshGreen
@@ -303,7 +304,7 @@ fun AddItemScreen() {
                                 singleLine = true,
                                 textStyle = MaterialTheme.typography.titleLarge.copy(
                                     fontWeight = FontWeight.Bold,
-                                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                                    textAlign = TextAlign.Center
                                 )
                             )
                             

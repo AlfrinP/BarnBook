@@ -1,4 +1,4 @@
-package com.example.barnbook.items
+package com.example.barnbook.ui.theme.items
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -30,8 +30,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.barnbook.R
@@ -82,7 +84,7 @@ fun ItemsScreen() {
             FloatingActionButton(
                 onClick = { /* Navigate to Add screen */ },
                 containerColor = FreshGreen,
-                contentColor = androidx.compose.ui.graphics.Color.White
+                contentColor = Color.White
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
@@ -217,7 +219,7 @@ fun EmptyItemsState(category: ItemCategory) {
             text = "Add your first ${category.name.lowercase()} item\nto start tracking harvest",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
+            textAlign = TextAlign.Center
         )
     }
 }

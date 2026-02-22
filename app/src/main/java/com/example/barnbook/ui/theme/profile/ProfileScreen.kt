@@ -1,4 +1,4 @@
-package com.example.barnbook.profile
+package com.example.barnbook.ui.theme.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
