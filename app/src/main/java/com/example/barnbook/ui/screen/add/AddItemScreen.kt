@@ -1,4 +1,4 @@
-package com.example.barnbook.ui.theme.add
+package com.example.barnbook.ui.screen.add
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -48,7 +48,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.barnbook.R
-import com.example.barnbook.ui.theme.items.ItemCategory
+import com.example.barnbook.ui.screen.items.ItemCategory
 import com.example.barnbook.ui.components.CategoryButton
 import com.example.barnbook.ui.theme.AnimalBrown
 import com.example.barnbook.ui.theme.FreshGreen

@@ -1,4 +1,4 @@
-package com.example.barnbook.ui.theme.items
+package com.example.barnbook.ui.screen.items
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
